@@ -1,8 +1,12 @@
 # Reload module
+
 import imp
 imp.reload(module)
 
+
+
 # My Favorite Boxplot
+
 import matplotlib.pyplot as plt
 import numpy as np
 boxprops = dict(linestyle='-', linewidth=2.5, color='black')
