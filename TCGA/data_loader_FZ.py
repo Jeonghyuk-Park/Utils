@@ -45,6 +45,12 @@ class Preprocess:
     """
     Class Preprocess
     tissue가 존재하는 coordinate를 미리 계산하여 export하는 함수들이 포함됨 (access_coordinate)
+    
+    svs_paths = glob.glob('/ssd4/NIH/LUAD_FFPE/*/*.svs')
+    print(len(svs_paths))
+    Preprocess = data_loader.Preprocess(svs_paths)
+    Preprocess.access_coordinate()
+    
     """
     
     def __init__(self, img_path_list, level = 1, threshold = .8):
