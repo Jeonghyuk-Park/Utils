@@ -90,3 +90,16 @@ dend = hierarchy.dendrogram(
 #plt.xticks(np.arange(1, 121, 10), new_ticks, fontsize=15, rotation = 45)
 hierarchy.set_link_color_palette(None)
 f.savefig('./Figure/Fig002.pdf')
+
+
+
+"""
+Natural Sort
+"""
+import re
+_nsre = re.compile('([0-9]+)')
+def natural_sort_key(s):
+    return [int(text) if text.isdigit() else text.lower()
+            for text in re.split(_nsre, s)] 
+  
+mylist.sort(key=natural_sort_key)
